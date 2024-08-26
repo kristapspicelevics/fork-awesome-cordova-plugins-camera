@@ -164,3 +164,109 @@ export enum Direction {
  * CameraOptions
  * CameraPopoverOptions
  */
+
+export class Camera extends AwesomeCordovaNativePlugin {
+  /**
+   * Constant for possible destination types
+   */
+  DestinationType = {
+    /** Return base64 encoded string. DATA_URL can be very memory intensive and cause app crashes or out of memory errors. Use FILE_URI or NATIVE_URI if possible */
+    DATA_URL: 0,
+    /** Return file uri (content://media/external/images/media/2 for Android) */
+    FILE_URI: 1,
+    /** Return native uri (eg. asset-library://... for iOS) */
+    NATIVE_URI: 2,
+  };
+
+  /**
+   * Convenience constant
+   */
+  EncodingType = {
+    /** Return JPEG encoded image */
+    JPEG: 0,
+    /** Return PNG encoded image */
+    PNG: 1,
+  };
+
+  /**
+   * Convenience constant
+   */
+  MediaType = {
+    /** Allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType */
+    PICTURE: 0,
+    /** Allow selection of video only, ONLY RETURNS URL */
+    VIDEO: 1,
+    /** Allow selection from all media types */
+    ALLMEDIA: 2,
+  };
+
+  /**
+   * Convenience constant
+   */
+  PictureSourceType = {
+    /** Choose image from picture library (same as PHOTOLIBRARY for Android) */
+    PHOTOLIBRARY: 0,
+    /** Take picture from camera */
+    CAMERA: 1,
+    /** Choose image from picture library (same as SAVEDPHOTOALBUM for Android) */
+    SAVEDPHOTOALBUM: 2,
+  };
+
+  /**
+   * Convenience constant
+   */
+  PopoverArrowDirection = {
+    ARROW_UP: 1,
+    ARROW_DOWN: 2,
+    ARROW_LEFT: 4,
+    ARROW_RIGHT: 8,
+    ARROW_ANY: 15,
+  };
+
+  /**
+   * Convenience constant
+   */
+  Direction = {
+    /** Use the back-facing camera */
+    BACK: 0,
+    /** Use the front-facing camera */
+    FRONT: 1,
+  };
+
+  /**
+   * Take a picture or video, or load one from the library.
+   *
+   * @param {CameraOptions} [options] Options that you want to pass to the camera. Encoding type, quality, etc. Platform-specific quirks are described in the [Cordova plugin docs](https://github.com/apache/cordova-plugin-camera#cameraoptions-errata-).
+   * @returns {Promise<any>} Returns a Promise that resolves with Base64 encoding of the image data, or the image file URI, depending on cameraOptions, otherwise rejects with an error.
+   */
+  @Cordova({
+    callbackOrder: 'reverse',
+  })
+  getPicture(options?: CameraOptions): Promise<any> {
+    return;
+  }
+
+    /**
+   * Check if we have read permission
+   *
+   * @returns {Promise<boolean>}
+   */
+    @Cordova()
+    hasReadPermission(): Promise<boolean> {
+      return;
+    }
+
+  /**
+   * Remove intermediate image files that are kept in temporary storage after calling camera.getPicture.
+   * Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
+   *
+   * @returns {Promise<any>}
+   */
+  @Cordova({
+    platforms: ['iOS'],
+  })
+  cleanup(): Promise<any> {
+    return;
+  }
+}
+export declare const Camera: CameraOriginal;
