@@ -64,7 +64,7 @@ var CameraOriginal = /** @class */ (function (_super) {
         };
         return _this;
     }
-    CameraOriginal.prototype.getPicture = function (options) { return cordova(this, "getPicture", { "successIndex": 1, "errorIndex": 2 }, arguments); };
+    CameraOriginal.prototype.getPicture = function (options) { return cordova(this, "getPicture", {}, arguments); };
     CameraOriginal.prototype.cleanup = function () { return cordova(this, "cleanup", {}, arguments); };
     CameraOriginal.pluginName = "Camera";
     CameraOriginal.plugin = "cordova-plugin-camera";
