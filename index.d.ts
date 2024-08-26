@@ -239,9 +239,7 @@ export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
    * @param {CameraOptions} [options] Options that you want to pass to the camera. Encoding type, quality, etc. Platform-specific quirks are described in the [Cordova plugin docs](https://github.com/apache/cordova-plugin-camera#cameraoptions-errata-).
    * @returns {Promise<any>} Returns a Promise that resolves with Base64 encoding of the image data, or the image file URI, depending on cameraOptions, otherwise rejects with an error.
    */
-  getPicture(options?: CameraOptions): Promise<any> {
-    return;
-  }
+  getPicture(options?: CameraOptions): Promise<any> 
 
     /**
    * Check if we have read permission
@@ -249,9 +247,7 @@ export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
    * @returns {Promise<boolean>}
    */
 
-    hasReadPermission(): Promise<boolean> {
-      return;
-    }
+    hasReadPermission(): Promise<boolean> 
 
   /**
    * Remove intermediate image files that are kept in temporary storage after calling camera.getPicture.
@@ -260,9 +256,7 @@ export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
    * @returns {Promise<any>}
    */
 
-  cleanup(): Promise<any> {
-    return;
-  }
+  cleanup(): Promise<any> 
 }
 
 export declare const Camera: CameraOriginal;
