@@ -165,7 +165,7 @@ export enum Direction {
  * CameraPopoverOptions
  */
 
-export class Camera extends AwesomeCordovaNativePlugin {
+export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
   /**
    * Constant for possible destination types
    */
@@ -269,4 +269,5 @@ export class Camera extends AwesomeCordovaNativePlugin {
     return;
   }
 }
+
 export declare const Camera: CameraOriginal;
