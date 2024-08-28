@@ -244,15 +244,15 @@ export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
     /**
    * Check if we have read permission
    *
-   * @returns {Promise<boolean>}
+   * @returns {Promise<any>}
    */
 
-  hasPermission(): Promise<boolean> 
+  hasPermission(): Promise<any> 
 
     /**
    * Check if we have read permission
    *
-   * @returns {Promise<boolean>}
+   * @returns {Promise<any>}
    */
 
   requestPermission(): Promise<any> 
