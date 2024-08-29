@@ -129,6 +129,7 @@ var Camera = /** @class */ (function (_super) {
     Camera.prototype.getPicture = function (options) { return core.cordova(this, "getPicture", { "callbackOrder": "reverse" }, arguments); };
     Camera.prototype.cleanup = function () { return core.cordova(this, "cleanup", { "platforms": ["iOS"] }, arguments); };
     Camera.prototype.hasPermission = function () { return cordova(this, "hasPermission", {}, arguments); };
+    Camera.prototype.requestPermission = function () { return cordova(this, "requestPermission", {}, arguments); };
     Camera.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.16", ngImport: i0__namespace, type: Camera, deps: null, target: i0__namespace.ɵɵFactoryTarget.Injectable });
     Camera.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.16", ngImport: i0__namespace, type: Camera });
     Camera.pluginName = "Camera";
@@ -141,6 +142,6 @@ var Camera = /** @class */ (function (_super) {
 }(core.AwesomeCordovaNativePlugin));
 i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.16", ngImport: i0__namespace, type: Camera, decorators: [{
             type: i0.Injectable
-        }], propDecorators: { getPicture: [], cleanup: [], hasPermission: [] } });
+        }], propDecorators: { getPicture: [], cleanup: [], hasPermission: [], requestPermission: [] } });
 
 exports.Camera = Camera;
