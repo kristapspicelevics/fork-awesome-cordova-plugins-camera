@@ -247,12 +247,21 @@ export declare class CameraOriginal extends AwesomeCordovaNativePlugin {
    * @returns {Promise<any>}
    */
 
-  hasPermission(): boolean 
+  hasPermission(): Promise<boolean> 
 
     /**
    * Check if we have read permission
    *
-   * @returns {boolean}
+   * @returns {Promise<boolean>}
+   */
+
+  requestPermission(): Promise<any> 
+
+  /**
+   * Remove intermediate image files that are kept in temporary storage after calling camera.getPicture.
+   * Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
+   *
+   * @returns {Promise<any>}
    */
 
   cleanup(): Promise<any> 
