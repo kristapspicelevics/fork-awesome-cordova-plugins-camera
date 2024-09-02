@@ -118,7 +118,7 @@ var CameraOriginal = /** @class */ (function (_super) {
         return _this;
     }
     CameraOriginal.prototype.getPicture = function (options) { return cordova(this, "getPicture", { "callbackOrder": "reverse" }, arguments); };
-    CameraOriginal.prototype.cleanup = function () { return cordova(this, "cleanup", { "platforms": ["iOS"] }, arguments); };
+    CameraOriginal.prototype.cleanup = function () { return cordova(this, "cleanup", {}, arguments); };
     CameraOriginal.prototype.hasPermission = function () { return cordova(this, "hasPermission", {}, arguments); };
     CameraOriginal.prototype.requestPermission = function () { return cordova(this, "requestPermission", {}, arguments); };
     CameraOriginal.pluginName = "Camera";
