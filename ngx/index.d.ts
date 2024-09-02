@@ -246,4 +246,6 @@ export declare class Camera extends AwesomeCordovaNativePlugin {
      */
 
     requestPermission(): Promise<any>;
+
+    echo(text: string): Promise<any>;
 }
