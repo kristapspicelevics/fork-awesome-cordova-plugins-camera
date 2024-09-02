@@ -121,7 +121,6 @@ var CameraOriginal = /** @class */ (function (_super) {
     CameraOriginal.prototype.cleanup = function () { return cordova(this, "cleanup", { "platforms": ["iOS"] }, arguments); };
     CameraOriginal.prototype.hasPermission = function () { return cordova(this, "hasPermission", {}, arguments); };
     CameraOriginal.prototype.requestPermission = function () { return cordova(this, "requestPermission", {}, arguments); };
-    CameraOriginal.prototype.echo = function (text) { return cordova(this, "echo", {}, arguments); };
     CameraOriginal.pluginName = "Camera";
     CameraOriginal.plugin = "cordova-plugin-camera";
     CameraOriginal.pluginRef = "navigator.camera";

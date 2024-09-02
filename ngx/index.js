@@ -109,7 +109,6 @@ var Camera = /** @class */ (function (_super) {
     Camera.prototype.cleanup = function () { return cordova(this, "cleanup", { "platforms": ["iOS"] }, arguments); };
     Camera.prototype.hasPermission = function () { return cordova(this, "hasPermission", {}, arguments); };
     Camera.prototype.requestPermission = function () { return cordova(this, "requestPermission", {}, arguments); };
-    Camera.prototype.echo = function (text) { return cordova(this, "echo", {}, arguments); };
     Camera.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.16", ngImport: i0, type: Camera, deps: null, target: i0.ɵɵFactoryTarget.Injectable });
     Camera.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.16", ngImport: i0, type: Camera });
     Camera.pluginName = "Camera";
